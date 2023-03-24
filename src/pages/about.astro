@@ -1,8 +1,21 @@
 ---
 import MainLayout from "../layouts/MainLayout.astro";
 
+const isRed = true;
 ---
 
 <MainLayout title="About" description="My About Page">
-  <p>hi from About</p>
+  <p>hi from <span>About</span></p>
+  <p class:list={['big', {red: isRed}]}>Red paragraph</p>
 </MainLayout>
+
+<style lang="scss">
+  p {
+    span {
+      color: blue;
+    }
+  }
+  .red {
+    color: red;
+  }
+</style>
