@@ -203,6 +203,7 @@ h1 span {
   color: hsl(var(--accent));
 }
 
+
 .h2,
 .content h2 {
   font-size: var(--fs-xl);
@@ -400,7 +401,7 @@ button {
   gap: var(--space-lg);
   align-items: center;
   margin-block: var(--space-xl);
-
+  
   @media --md {
     grid-template-columns: 1fr 2fr;
     place-content: center;
@@ -610,7 +611,6 @@ header {
       border-radius: var(--radius-sm);
       box-shadow: var(--shadow-sm);
       width: fit-content;
-      width: moz-fit-content;
 
       & a {
         text-decoration: none;
