@@ -9,7 +9,7 @@ import partytown from "@astrojs/partytown";
 
 // https://astro.build/config
 export default defineConfig({
-  site: 'https://astro-blog-cip.netlify.app',
+  // site: 'https:',
   // rss needs this field
   integrations: [image({
     serviceEntryPoint: '@astrojs/image/sharp'
