@@ -8,6 +8,8 @@ const allPosts = await Astro.glob("./blog/*.md");
 const formattedPosts = formatBlogPosts(allPosts, {
   limit: 3
 });
+
+const isPurple = true;
 ---
 
 <MainLayout title="Home" description="My Home Page">
@@ -20,7 +22,7 @@ const formattedPosts = formatBlogPosts(allPosts, {
     />
     <div class="content">
       <h1 class="h1">My Blog</h1>
-      <p>
+      <p class:list={["big", {purple: isPurple}]}>
         Lorem ipsum dolor sit amet consectetur adipisicing elit. Magnam deleniti soluta molestiae, reprehenderit, similique deserunt facere odio amet excepturi quae iure mollitia quisquam sunt debitis necessitatibus perspiciatis eum consequuntur eligendi quo illum quasi?
       </p>
       <Link
@@ -45,3 +47,13 @@ const formattedPosts = formatBlogPosts(allPosts, {
     </div>
   </section>
 </MainLayout>
+
+
+<style>
+  .big {
+    font-size: 1.5rem;
+  }
+  .purple {
+    color: rgb(99, 50, 190);
+  }
+</style>

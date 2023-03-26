@@ -4,15 +4,22 @@ import Footer from '../components/Footer.astro';
 import Nav from '../components/Nav.astro';
 import "../styles/global.css";
 
-interface Props {
-  title?: string;
-  description?: string;
-}
-const {title = "Astro Blog", description = "Default Description"} = Astro.props as Props;
+// interface Props {
+//   title?: string;
+//   description?: string;
+// }
+// const {title = "Astro Blog", description = "Default Description"} = Astro.props as Props;
+const {
+  title = "Astro Blog",
+  description = "Default Description",
+  image,
+  frontmatter,
+  robots
+} = Astro.props;
 ---
 
 <html lang="en">
-  <MainHead {title} {description} />
+  <MainHead {title} {description} {image} {frontmatter} {robots} />
   <!-- <MainHead title={title} description={description} /> -->
 	<body>
     <Nav />
